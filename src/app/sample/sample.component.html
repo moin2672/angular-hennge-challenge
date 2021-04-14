@@ -1,0 +1,75 @@
+<div style="margin-top:20px;" >
+  
+  <div class="row">
+    <div class="col-md-4">
+
+      <form [formGroup]="form" (submit)="onSearchMail()">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+
+              <span class="input-group-text" for="start"><i class="fa fa-calendar"></i></span>
+
+            </div>
+
+            <input type="date" class="form-control" formControlName="fromDate" >
+
+            <input type="date" class="form-control" formControlName="toDate">
+            <div class="input-group-append">
+              <button  class="form-control btn btn-secondary"><i class="fa fa-search" style="color:black" type="submit"></i></button>
+              <!-- <span class="input-group-text">.00</span> -->
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+ 
+    <div class="col-md-2"><button class="btn btn-secondary" style="color:black" [hidden]="!resetFilter" (click)="onReset()">reset</button></div>
+  </div>
+</div>
+<h3 style="color:#6c6767">Results: {{data.length}} mail(s)</h3>
+<hr>
+<p *ngIf="data.length<=0" class="text-center">No Results Found..</p>
+<table class="table table-hover" *ngIf="data.length>0">
+  <thead>
+    <tr class="table-active">
+      <th scope="col">Id</th>
+      <th scope="col">From</th>
+      <th scope="col">To</th>
+      <th scope="col">Cc</th>
+      <th scope="col">Bcc</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Body</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let d of data">
+
+    <tr>
+      <th scope="row">{{d.id}}</th>
+      <td>{{d.from}}</td>
+      <td>{{d.to}}</td>
+      <td>{{d.cc}}</td>
+      <td>{{d.bcc}}</td>
+      <td>{{d.subject}}</td>
+      <td>{{d.body}}</td>
+      <td>{{d.date}}</td>
+    </tr>
+
+  </tbody>
+</table>
+<!-- <div class="row" *ngFor="let d of data">
+  <div class="col-md-1">{{d.id}}</div>
+  <div class="col-md-2">{{d.from}}</div>
+  <div class="col-md-6">
+    To: {{d.to}} <br>
+    Cc: {{d.cc}} <br>
+    Bcc: {{d.bcc}} <br>
+    Subject: {{d.subject}} <br>
+    Body: {{d.body}}
+  </div>
+  <div class="col-md-2">{{d.date}}</div>
+  <div class="col-md-1"><button class="btn btn-warning">Archieve</button></div>
+</div> -->

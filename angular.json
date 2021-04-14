@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-hennge-challenge"
+    }
+  },
+  "defaultProject": "angular-hennge-challenge",
+  "cli": {
+    "analytics": "388b881b-38dd-443e-b77e-56ca051c68c6"
+  }
 }

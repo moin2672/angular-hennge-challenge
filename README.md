@@ -1,6 +1,12 @@
-# AngularHenngeChallenge
+# AngularHenngeChallenge Efforts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+1. Created an Angular app with Sample component
+2. Used some sample data having mail informations
+3. Added filter conditions by getting date range values from a reactive form.
+4. Filtering the sample JSON array based on the obtained date range.
+5. Converted the given Image into data:image. (It is because, the project is created in StackBlitz, so the image file upload is avoided)
+
+This project was generated with: https://angular-hennge-challenge.stackblitz.io
 
 ## Development server
 
