@@ -1,4 +1,4 @@
-##Improvements implemented in the challenge project
+#Improvements implemented in the challenge project
 
 
 1. Angular material theme is used.
